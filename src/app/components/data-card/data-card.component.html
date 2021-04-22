@@ -1,0 +1,19 @@
+<mat-card fxLayout="row" fxLayoutWrap class="card" *ngFor="let data of countryData">
+    <div>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image" [style.background-image]="'url(' + data.flag + ')'">
+            </div>
+            <mat-card-title><b>{{data.name}}</b></mat-card-title>
+            <mat-card-subtitle>Capital : {{data.capital}}</mat-card-subtitle>
+            <mat-card-subtitle>Region : {{data.region}}</mat-card-subtitle>
+            <mat-card-subtitle>Sub Region : {{data.subregion}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+            <div class="space">Population : {{data.population}}</div>
+            <div class="vertical space"></div>
+            <div class="space">Area : {{data.area}}</div>
+            <div class="vertical space"></div>
+            <div class="space">Currency : {{data.currencies[0].name}} ({{data.currencies[0].symbol}})</div>
+        </mat-card-content>
+    </div>
+</mat-card>

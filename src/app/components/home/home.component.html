@@ -1,0 +1,37 @@
+<!-- Header -->
+<div class="header">
+    <a href="#default" class="logo"><img class="logo-image" src="../../../assets/logo.jpg">GLOBE</a>
+    <div class="header-text" >GLOBE - WORLD IN OUR FINGERTIP</div>
+    <!-- <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div> -->
+</div>
+<!-- Header -->
+<div class="container" layout="row" layout-wrap *ngIf="countryData.length">
+    <div class="search">
+        <form class="form">
+            <mat-form-field class="full-width">
+                <div class="search">
+                    <input #search matInput placeholder="Search Country/Capital/Region/Currency...." class="search-input" />
+                    <button class="contained-button" aria-label="Search" mat-button
+                        (click)="Search(search.value)">Search</button>
+                    <button class="contained-button" aria-label="Clear" mat-button
+                        (click)="Clear(); search.value =''">Clear</button>
+                </div>
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="mat-card-position"> <label class="list-text">LIST OF COUNTRIES</label>
+        <app-data-card *ngIf="!isSearch" [countryData]="countryData"></app-data-card>
+        <app-data-card *ngIf="isSearch" [countryData]="searchData"></app-data-card>
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <p> &copy; Copyright 2021 Author: Globe<br>
+        <a href="mailto:globe@example.com">globe@example.com</a>
+    </p>
+</footer>
+<!-- Footer -->

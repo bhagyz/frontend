@@ -1,0 +1,48 @@
+.card {
+    max-width: 50vw;
+    border: 2px solid #3b7eb4;
+    margin: 10px 10px 10px 120px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 2px rgb(160, 88, 228);
+        .card-content {
+            display: flex;
+        }
+  }
+  
+  .header-image {
+    background-size: cover;
+  }
+
+  .space {
+    margin-right: 15px;
+  }
+
+  .vertical {
+    border-left: 2px solid rgb(73, 69, 69);
+    height: 20px;
+  }
+  .form {
+    min-width: 150px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  .search {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+  }
+  .search-input {
+    width: 50vw;
+    height: 8vh;
+  }
+  .mat-card-position {
+    width: 80vw;
+    height: 80vh;
+    overflow: auto;
+  }
